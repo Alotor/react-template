@@ -25,7 +25,19 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }, 'postcss-loader',],
+        use: [
+          'style-loader',
+          {
+            loader: 'typings-for-css-modules-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path][name]__[local]--[hash:base64:5]',
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          'postcss-loader'
+        ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
