@@ -40,20 +40,35 @@ module.exports = {
         ],
       },
       {
+        test: /\.(eot|woff2?|svg|ttf)([\?]?.*)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/font/[hash].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-          'file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]',
-          'image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false',
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/img/[hash].[ext]'
+            }
+          }
         ],
       },
     ],
   },
   plugins: [
     new CheckerPlugin(),
-    new HtmlWebpackPlugin({template: 'index.html.ejs',}),
     new HtmlWebpackPlugin({
       title: 'React template',
       template: 'index.html.ejs',
+      favicon: 'assets/icon/favicon.ico',
     }),
   ],
   externals: {
