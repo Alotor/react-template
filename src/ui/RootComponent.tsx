@@ -7,8 +7,8 @@ class RootComponent extends Component {
   public render() {
     return (
       <div>
-        <h1>Hello world!!</h1>
-        <h2 styleName="test">Helooooo world</h2>
+        <h1>Root component</h1>
+        <h2 styleName="test">Test</h2>
       </div>
     );
   }

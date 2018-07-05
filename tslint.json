@@ -97,6 +97,11 @@
       "check-operator",
       "check-separator",
       "check-type"
-    ]
+    ],
+    "ordered-imports": [
+      true, {
+        "import-sources-order": "any",
+        "named-imports-order": "case-insensitive"
+      }]
   }
 }

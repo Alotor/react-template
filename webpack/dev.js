@@ -6,12 +6,13 @@ module.exports = merge(common, {
   mode: 'development',
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8081',
+    'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     './index.tsx'
   ],
   devServer: {
     hot: true,
+    port: 3000,
     stats: {
       colors: true,
       hash: false,

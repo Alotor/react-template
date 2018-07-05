@@ -51,6 +51,10 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new HtmlWebpackPlugin({template: 'index.html.ejs',}),
+    new HtmlWebpackPlugin({
+      title: 'React template',
+      template: 'index.html.ejs',
+    }),
   ],
   externals: {
     'react': 'React',

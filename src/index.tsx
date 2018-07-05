@@ -1,8 +1,9 @@
-import * as React from "react";
+import React from "react";
 import { render } from "react-dom";
 import { AppContainer } from "react-hot-loader";
 
 import RootComponent from "./ui/RootComponent";
+import "./styles/global.css";
 
 const ROOT_ELEMENT = document.getElementById("app-root");
 
