@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   resolve: {
@@ -69,6 +70,12 @@ module.exports = {
       title: 'React template',
       template: 'index.html.ejs',
       favicon: 'assets/icon/favicon.ico',
+    }),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'src',
+      files: '**/*.css',
+      quiet: false
     }),
   ],
   externals: {
