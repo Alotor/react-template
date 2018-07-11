@@ -10,7 +10,7 @@ Basics for a new react project
 - [x] Assets handling, favicon and sensitive fonts
 - [x] Style lint
 - [x] Enable absolute paths
-- [ ] Make webpack put all the vendors in a single file
+- [x] Make webpack put all the vendors in a single file
 - [ ] Extract text for styles
 - [ ] Remove hot-reloading on production build
 - [ ] RxJs

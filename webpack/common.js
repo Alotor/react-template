@@ -78,11 +78,21 @@ module.exports = {
       quiet: false
     }),
   ],
-  externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM',
-  },
   performance: {
     hints: false,
   },
+  optimization: {
+    namedModules: true,
+    runtimeChunk: true,
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          chunks: "all",
+          priority: 1
+        }
+      }
+    }
+  }
 };
