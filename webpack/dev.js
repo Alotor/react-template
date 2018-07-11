@@ -2,17 +2,19 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 const common = require('./common');
 
+const port = 1234;
+
 module.exports = merge(common, {
   mode: 'development',
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:' + port,
     'webpack/hot/only-dev-server',
     './index.tsx'
   ],
   devServer: {
     hot: true,
-    port: 3000,
+    port: port,
     stats: {
       colors: true,
       hash: false,

@@ -2,8 +2,8 @@ import React from "react";
 import { render } from "react-dom";
 import { AppContainer } from "react-hot-loader";
 
-import RootComponent from "./ui/RootComponent";
-import "./styles/global.css";
+import RootComponent from "ui/RootComponent";
+import "styles/global.css";
 
 const ROOT_ELEMENT = document.getElementById("app-root");
 
@@ -22,8 +22,8 @@ renderApp(RootComponent);
 declare let module: { hot: any };
 
 if (module.hot) {
-  module.hot.accept("./ui/RootComponent", () => {
-    const NewRootComponent = require("./ui/RootComponent").default;
+  module.hot.accept("ui/RootComponent", () => {
+    const NewRootComponent = require("ui/RootComponent").default;
     renderApp(NewRootComponent);
   });
 }

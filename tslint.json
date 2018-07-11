@@ -56,7 +56,9 @@
     ],
     "no-eval": true,
     "no-internal-module": true,
+    "no-implicit-dependencies": false,
     "no-trailing-whitespace": true,
+    "no-submodule-imports": false,
     "no-unsafe-finally": true,
     "no-var-keyword": true,
     "one-line": [

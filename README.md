@@ -9,8 +9,7 @@ Basics for a new react project
 - [x] Global styles
 - [x] Assets handling, favicon and sensitive fonts
 - [x] Style lint
-- [ ] Fixes dev-dependencies
-- [ ] Enable absolute paths
+- [x] Enable absolute paths
 - [ ] Make webpack put all the vendors in a single file
 - [ ] Extract text for styles
 - [ ] Remove hot-reloading on production build
@@ -18,3 +17,4 @@ Basics for a new react project
 - [ ] React-redux, redux-observable and immutability-helper
 - [ ] React-router
 - [ ] Jest, protractor
+- [ ] Fixes dev-dependencies
